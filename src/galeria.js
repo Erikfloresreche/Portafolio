@@ -1,6 +1,7 @@
 
 const trabajos = document.getElementById('trabajos');
 const ventanaTrabajos = document.getElementById('ventana-trabajos');
+const btnAbrirApp = document.getElementById('btn__open--app');
 
 const datos = [
     {
@@ -49,6 +50,7 @@ trabajos.addEventListener('click', (e) => {
                 return trabajo
             }
         });
+        
 
         //Trabajamos con desestructuración: 
         const {titulo, texto} = trabajo[0];
@@ -57,8 +59,9 @@ trabajos.addEventListener('click', (e) => {
         ventanaTrabajos.querySelector('.ventana__parrafo').innerText = texto;
         ventanaTrabajos.querySelector('.ventana__imagen').src = trabajoClickeado.querySelector('img').src;
 
-        ventanaTrabajos.classList.add('ventana--active');
+        ventanaTrabajos.classList.add('ventana--active');  
     }
+        
 });
 
 //EventListener para cerrar la ventana de los trabajos:
@@ -76,6 +79,39 @@ ventanaTrabajos.querySelector('.ventana__overlay').addEventListener('click', (e)
     
     if(e.target.matches('.ventana__overlay')){
         ventanaTrabajos.classList.remove('ventana--active');
+    }
+});
+
+//EventListener para abrir los enlaces de los proyectos:
+
+btnAbrirApp.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+    if (ventanaTrabajos.classList.contains('ventana--active')) {
+        let h1Text = btnAbrirApp.closest('.ventana__info').querySelector('h1').innerHTML;
+        switch (h1Text) {
+            case 'Galeria de Arte':
+                window.open('https://erikfloresreche.github.io/GaleriaDeArte/', '_blank');
+                break;
+            case 'CineVerse':
+                window.open('https://erikfloresreche.github.io/CineVerse/', '_blank');
+                break;
+            case 'SneakersDeal':
+                window.open('https://erikfloresreche.github.io/SneakersDeal/', '_blank');
+                break;
+            case 'SmartControl':
+                window.open('https://erikfloresreche.github.io/GaleriaDeArte/', '_blank');
+                break;
+            case 'BankTransfer':
+                window.open('https://erikfloresreche.github.io/GaleriaDeArte/', '_blank');
+                break;
+            case 'Tic Tac Toe':
+                window.open('https://erikfloresreche.github.io/GaleriaDeArte/', '_blank');
+                break;
+            default:
+                // Si el título no coincide con ninguno de los casos, no hacemos nada
+                break;
+        }
     }
 });
 
