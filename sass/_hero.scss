@@ -156,3 +156,38 @@
 		}
 	}
 }
+
+
+/* Consultas de medios para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+	.hero {
+		grid-template-columns:100%; /* Cambiar a una sola columna */
+	}
+
+	.hero__info {
+		padding: 20px; /* Reducción del relleno para dispositivos móviles */
+	}
+	.hero__burbuja {
+		width: 100%;
+	}
+	.hero__header{
+		display: flex;
+		align-items: center;
+	}
+	.hero__subtitulo, .hero__resumen {
+		text-align: center;
+	}
+	.hero__redes {
+		justify-content: center;
+	}
+	.hero__burbuja--active-2{
+		transform: translateY(-450px);
+	}
+	.hero__burbuja--active-1 {
+		transform: translateY(-380px);
+	}
+	.hero__burbuja--azul {
+		transition: 1s ease-in-out all .3s;
+	}
+}
+

@@ -156,13 +156,13 @@ btnAbrirApp.addEventListener('click', (e) => {
                 window.open('https://erikfloresreche.github.io/SneakersDeal/', '_blank');
                 break;
             case 'SmartControl':
-                window.open('https://erikfloresreche.github.io/GaleriaDeArte/', '_blank');
+                window.open('https://erikfloresreche.github.io/SmartControl/', '_blank');
                 break;
             case 'BankTransfer':
-                window.open('https://erikfloresreche.github.io/GaleriaDeArte/', '_blank');
+                window.open(' https://erikfloresreche.github.io/BankTransfer/', '_blank');
                 break;
             case 'Tic Tac Toe':
-                window.open('https://erikfloresreche.github.io/GaleriaDeArte/', '_blank');
+                window.open('https://erikfloresreche.github.io/TicTacToe/', '_blank');
                 break;
         }
     }
