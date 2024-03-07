@@ -131,5 +131,29 @@
 	#btn__open--app:active {
 		background: #0086a8;
 	}
-
 }
+
+@media only screen and (max-width: 768px) {
+    .ventana__body {
+		font-size: 12px;
+		text-align: center;
+		background: #fff;
+		margin: 50px;
+		height: 100%;
+		border-radius: 10px;
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	.ventana__overlay {
+		height: auto;
+		padding-bottom: 200px;
+	}
+	.ventana__info {
+		gap: 0;
+		padding: 0;
+	}
+	.container__btn__open--app  {
+		margin-bottom: 10px;
+	}
+}
+
